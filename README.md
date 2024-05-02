@@ -110,9 +110,9 @@ Please create an Issue for any support related question on this project. Questio
 
 ## Authors and acknowledgment
 
-**Authors:** Haley Gipson, Ramon Diego Guerra, Huaidian Daniel Hou, Anna Zitian Huang.
+**Authors:** Haley Gipson, Ramon Diego Guerra, [Huaidian Daniel Hou](https://www.danielhou.me/), Anna Zitian Huang.
 
-We greatly appreciate Dr. Alejandro Bravo-Doddoli and Kausik Das for their mentoring of the project. We also thank the University of Michigan MATH 440: Lab of Geometry program and Dr. Nir Gadish for making this experience possible.
+We greatly appreciate [Dr. Alejandro Bravo-Doddoli](https://public.websites.umich.edu/~abravodo/) and [Kausik Das](https://lsa.umich.edu/math/people/phd-students/kausik.html) for their mentoring of the project. We also thank the University of Michigan MATH 440: Lab of Geometry program and [Dr. Nir Gadish](https://websites.umich.edu/~gadish/) for making this experience possible.
 
 ## License
 
