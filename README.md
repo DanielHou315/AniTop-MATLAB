@@ -1,4 +1,4 @@
-# Tops
+# AniTop
 
 ## About AniTop Project
 
