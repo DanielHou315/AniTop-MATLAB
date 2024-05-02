@@ -29,37 +29,11 @@ git clone https://gitlab.eecs.umich.edu/logm/wi24/tops.git
 cd tops
 ```
 
-Then, choose your preferred language.
-
-**WARNING:** due to different computing graphics libraries, simulations and animations produced by MATLAB and Python may not be identical. They will both be, however, close to each other and accurate approximate real-world scenarios.
-
 ### Get Started with MATLAB
 
 - This packages requires **MATLAB R2023b** or later for styling graphic. Legacy versions of MATLAB are not accessible to the developers, thus we do not plan to support it. However, we welcome communty developers to contribute to legacy support!
 - To run the MATLAB version, open `matlab/AniTop.m` in MATLAB and run `AniTop`.
 - If MATLAB prompts you to change directory or add to path, you can choose either options. The package is designed to figure everything out by itself.
-
-### Get Started with Python (Work in Progress)
-
-- If you prefer running this package in a virtual environment like Anaconda, **activate your virtual environment first**. If you don't know what that is, you can ignore this message.
-- The minumum version required for AniTop is **Python 3.7.x.** To check your python version, run
-  ```bash
-  >>> python3 --version
-  Python 3.x.x
-  ```
-
-* To run the Python version of AniTop, enter the `py/` directory and install required packages:
-
-  ```bash
-  >>> cd py/
-  >>> python3 -m pip install -r requirements.txt
-  ```
-
-  Then, run
-
-  ```bash
-  >>> python3 AniTop.py
-  ```
 
 ## Configurations
 
@@ -74,10 +48,6 @@ This project contains the following directories and files:
 
 **From the Repository**
 
-* `py/`
-  * `sim/` directory includes a Python implementation of our simulators
-  * `animation/` directory includes a Python implementation of our visualization framework.
-  * `AniTop.py` is the driver program for the Python version of AniTop.
 * `matlab/`
   * `sim/` directory includes a MATLAB implementation of our simulators
   * `animation/` directory includes a MATLAB implementation of our simulators
