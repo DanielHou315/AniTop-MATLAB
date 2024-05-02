@@ -1,0 +1,30 @@
+{
+  "mode":"single", 
+  "verbose":false,
+  "sim":{
+    "tops":[
+      "euler",
+      "lagrange",
+      "kovalevskaya"
+    ],
+    "init_moment_inertia":[
+      [2,2,1]
+    ],
+    "init_ang_velocity":[
+      [2,0.2,5]
+    ],
+    "init_heading":[
+      [0,30,0]
+    ],
+    "mgl":[
+      1
+    ],
+    "mga":[
+      1
+    ]
+  },
+  "animation":{
+    "kernel":"Tops",
+    "sliding_window":true
+  }
+}
