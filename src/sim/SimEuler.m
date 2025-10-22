@@ -189,7 +189,7 @@ classdef SimEuler
             Dpsi = [-cos(theta)*sin(psi) / sin(theta), -cos(theta)*cos(psi)/sin(theta), 1];
             M = [Dphi;Dtheta;Dpsi];
 
-            eulerAngleRate = M * transpose(omega)
+            eulerAngleRate = M * transpose(omega);
         end
 
         function [phi, theta, psi] = adjustEulerFromQuat(phi, theta, psi)

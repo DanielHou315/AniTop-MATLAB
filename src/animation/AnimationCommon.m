@@ -37,7 +37,7 @@ classdef AnimationCommon
             %   - sideAxes: graphic for the axes of the side plots, (nx1)array
             % -----------------------------------
             figureWidth = 1280;
-            figureHeight = 960;
+            figureHeight = 720;
             hPad = 30;
             vPad = 60;
             

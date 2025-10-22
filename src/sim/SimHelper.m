@@ -47,8 +47,8 @@ classdef SimHelper
             % Define the path to the data directory relative to this script
             curTime = datetime('now', 'TimeZone', 'local', 'Format', 'yyyy-MM-dd_HH-mm-ss');
             scriptPath = fileparts(mfilename('fullpath'));
-            dataDirPath = fullfile(scriptPath(1:end-10), 'data');
-            
+            dataDirPath = fullfile(scriptPath(1:end-7), 'data');
+           
             % Check if the data directory exists, if not, create it
             if ~exist(dataDirPath, 'dir')
                 mkdir(dataDirPath);

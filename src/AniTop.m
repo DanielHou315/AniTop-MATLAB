@@ -5,34 +5,41 @@
 
 % Example Usage:
 % In MATLAB command window
-% >>> AniTop
+% >>> AniTop                    % Uses default config/config.json
+% >>> AniTop('config_kov.json') % Uses custom config file
 
 % Primary Functions:
-%   -- AniTop(): this is the driver function
+%   -- AniTop(configFileName): this is the driver function
 
 % Parameters/Properties:
-%   -- Configuration of the driver is done through config/config.json.
+%   -- configFileName (optional): Name of the configuration file in the config/ directory.
+%                                  If not provided, uses config/config.json.
 %   -- Please refer to README for details.
 
 % Generative AI Disclaimer:
 %  -- This class implementation is free of Generative AI output.
 % ------------------------------------
 
-function AniTop()
+function AniTop(configFileName)
     % ------------------------
     % The driver function for the entire AniTop project.
     % ------------------------
+
+    % Handle optional configFileName argument
+    if nargin < 1
+        configFileName = '';  % Empty string signals to use default
+    end
 
     % Setup Paths
     packageRoot =  getPackageRootPath();
 
     % Create and add necessary Paths
     createReqPaths();
-    addpath(packageRoot+"/matlab/animation");
-    addpath(packageRoot+"/matlab/sim");
+    addpath(packageRoot+"/src/animation");
+    addpath(packageRoot+"/src/sim");
 
     % Read Config
-    config = readConfig();
+    config = readConfig(configFileName);
     mode = config.mode;
     verboseMode = config.verbose;
 
@@ -227,11 +234,26 @@ end
 % Path Helper Functions
 %
 % ------------------------------------
-function config = readConfig()
+function config = readConfig(configFileName)
     % ------------------------------------
     % Open Config File, read and return raw string
+    % Parameters:
+    %   configFileName (optional): Name of config file in config/ directory
+    %                               If empty or not provided, uses default
     % ------------------------------------
-    configFile = getDefaultConfigPath();
+    if nargin < 1 || isempty(configFileName)
+        % Use default config path
+        configFile = getDefaultConfigPath();
+    else
+        % Use custom config file name
+        configPath = convertCharsToStrings(getPackageRootPath()) + "config";
+        configFile = fullfile(configPath, configFileName);
+
+        % Check if custom config file exists
+        if ~exist(configFile, 'file')
+            error('Config file not found: %s', configFile);
+        end
+    end
 
     % Read file and decode json
     fid = fopen(configFile);
@@ -248,7 +270,7 @@ function path = getPackageRootPath()
     st = dbstack;
     f = st.file;
     mainFilePath = which(f(1:end-2));
-    path = mainFilePath(1:end-15);
+    path = mainFilePath(1:end-12);
 end
 
 
