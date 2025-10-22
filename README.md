@@ -1,5 +1,7 @@
 # AniTop
 
+News: Checkout the [AniTop-Web](https://github.com/DanielHou315/AniTop-Web) Project and run AniTop entirely in your browser!
+
 ## About AniTop Project
 
 This project is supported by the University of Michigan MATH 440 Lab of Geometry 2024WN team Tops.
